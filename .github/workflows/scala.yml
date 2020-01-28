@@ -24,4 +24,3 @@ jobs:
         SLACK_TITLE: '\ｱｶﾝ/'
         SLACK_CHANNEL: "#yodogawa_notice"
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-
