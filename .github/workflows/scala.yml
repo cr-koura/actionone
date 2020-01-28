@@ -20,7 +20,7 @@ jobs:
       name: Slack Notification
       uses: rtCamp/action-slack-notify@v2.0.0
       env:
-        SLACK_COLOR: "danger"
-        SLACK_TITLE: '\ｱｶﾝ/'
+        SLACK_COLOR: "FF0000"
+        SLACK_TITLE: '\ｱｶｲ/'
         SLACK_CHANNEL: "#yodogawa_notice"
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
