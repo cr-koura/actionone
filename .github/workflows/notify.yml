@@ -1,21 +1,12 @@
-name: notify
-on: [push]
-#  push:
-#    branches:
-#      - master
-#    paths:
-#      - 'docs/**'
-#      - 'bin/**'
-
+on: push
+name: Slack Notification Demo
 jobs:
-  notify:
+  slackNotification:
+    name: Slack Notification
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Send notification to Slack when master/docs has been updated
-        uses: pullreminders/slack-action@v1
-        with:
-          #https://creaturesinc.slack.com/archives/GT8F5JSGP
-          args: '{\"channel\":\"GT8F5JSGP\", \"text\":\"ﾎｴﾎｴ\"}'
-        env:
-          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2.0.0
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
